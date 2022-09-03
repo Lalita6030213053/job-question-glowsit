@@ -9,18 +9,18 @@ export class AppComponent implements OnInit {
   title = 'my-app';
 
   ngOnInit(): void {
-    this.fib(12); //ข้อ 1 Fibonacci Sequence
+    this.fib(12);                             //ข้อ 1 Fibonacci Sequence
     this.shift([1, 2, 3, 4, 5, 6], 'left', 2) //ข้อ 2 Array shift
-    this.Vowels('abracadabra'); //ข้อ 3 Vowels
+    this.Vowels('abracadabra');               //ข้อ 3 Vowels
   }
 
-  fib(number: number) {
+  fib(number: number) { 
     let a = 0,
       b = 1,
       fib = 0
 
-    for (let i = 1; i < number; ++i) {
-      const c = a + b;
+    for (let i = 1; i < number; ++i) { // วนเช็คตามค่า number ที่รับมา
+      const c = a + b; 
       a = b;
       b = c;
 
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
     let arr2 = [],
       finalArray = []
 
-    for (let i = 0; i < position; i++) { //วนลูปตามค่า position
+    for (let i = 0; i < position; i++) { // วนลูปตามค่า position
       if (director === 'left') {
         arr2.push(arr1.shift());
       } else if (director === 'rigt') {
@@ -59,10 +59,10 @@ export class AppComponent implements OnInit {
     let count: number = 0,
         strNum: string = '';
 
-    for (let i = 0; i < str.length; i++) { // เช็ค
+    for (let i = 0; i < str.length; i++) { 
       strNum = str.charAt(i);
       
-      if (strNum === 'a' || strNum === 'e' || strNum === 'i' || strNum === 'o' || strNum === 'u'){
+      if (strNum === 'a' || strNum === 'e' || strNum === 'i' || strNum === 'o' || strNum === 'u'){ // เช็คสระจาก string ที่รับเข้ามา
         count = count + 1 ;
       } else { }
     }
