@@ -29,12 +29,12 @@ export class AppComponent implements OnInit {
     console.log(fib);
   }
 
-  shift(arr: any[], director: string, position: number) {
+  shift(arr: any[], director: string, position: number) { //function shift รับพารามิเตอร์ 3 ตัว
     let arr1 = arr;
     let arr2 = [],
       finalArray = []
 
-    for (let i = 0; i < position; i++) {
+    for (let i = 0; i < position; i++) { //วนลูปตามค่า position
       if (director === 'left') {
         arr2.push(arr1.shift());
       } else if (director === 'rigt') {
@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
       }
     }
 
-    if (director === 'left') {
+    if (director === 'left') { 
       finalArray = arr1.concat(arr2)
     } else if (director === 'rigt') {
       finalArray = arr2.concat(arr1)
@@ -55,11 +55,11 @@ export class AppComponent implements OnInit {
     console.log(finalArray);
   }
 
-  Vowels(str: string) {
+  Vowels(str: string) { 
     let count: number = 0,
         strNum: string = '';
 
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0; i < str.length; i++) { // เช็ค
       strNum = str.charAt(i);
       
       if (strNum === 'a' || strNum === 'e' || strNum === 'i' || strNum === 'o' || strNum === 'u'){
