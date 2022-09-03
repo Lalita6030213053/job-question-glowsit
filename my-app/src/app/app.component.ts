@@ -9,9 +9,9 @@ export class AppComponent implements OnInit {
   title = 'my-app';
 
   ngOnInit(): void {
-    this.fib(12);                             //ข้อ 1 Fibonacci Sequence
-    this.shift([1, 2, 3, 4, 5, 6], 'left', 2) //ข้อ 2 Array shift
-    this.Vowels('abracadabra');               //ข้อ 3 Vowels
+    this.fib(12);                                            //ข้อ 1 Fibonacci Sequence
+    this.shift(['john', 'jane', 'sarah', 'alex'], 'left', 2) //ข้อ 2 Array shift
+    this.Vowels('abracadabra');                              //ข้อ 3 Vowels
   }
 
   fib(number: number) { 
@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
       }
     }
 
-    if (director === 'left') { 
+    if (director === 'left') {  // เช็ค director เพื่อรวม array
       finalArray = arr1.concat(arr2)
     } else if (director === 'rigt') {
       finalArray = arr2.concat(arr1)
@@ -67,7 +67,7 @@ export class AppComponent implements OnInit {
       } else { }
     }
 
-    console.log('count: ' + count);
+    console.log(count);
   }
 
 }
